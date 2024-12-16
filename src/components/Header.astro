@@ -1,5 +1,81 @@
----
----
-<div>
-Header
+<!-- Dark Grey Banner -->
+<div class="bg-darkgrey text-white text-sm py-2">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <p>Din lokale blomsterforhandler</p>
+    <div class="flex space-x-4">
+      <span>Bæredygtigt & Unikt Udvalg</span>
+      <a href="/click-collect" class="hover:underline">Click & Collect Service</a>
+    </div>
+  </div>
 </div>
+
+<!-- Main Header -->
+<header class="bg-white border-b border-rose font-semibold laptop:-pb-">
+  <div class="container mx-auto px-4 py-2 flex justify-between items-center relative">
+    <!-- Logo -->
+    <a href="/" class="relative laptop:transform laptop:translate-y-6 laptop:ml-4">
+      <img src="/logo.png" alt="logo_just" class="laptop:h-32" />
+    </a>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden laptop:flex space-x-6 items-center">
+      <a href="/buketter" class="text-darkgrey hover:text-wine">Buketter</a>
+      <a href="/livets-begivenheder" class="text-darkgrey hover:text-wine">Livets Begivenheder</a>
+      <a href="/om-os" class="text-darkgrey hover:text-wine">Om Os</a>
+      <a href="/kontakt" class="text-darkgrey hover:text-wine">Kontakt</a>
+      <a href="/click-collect" class="text-darkgrey hover:text-wine">Click & Collect</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="laptop:hidden text-darkgrey focus:outline-none"
+      id="menu-toggle"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav
+    class="hidden laptop:hidden bg-white border-t border-rose"
+    id="mobile-menu"
+  >
+    <div class="flex flex-col space-y-4 px-4 py-2">
+      <a href="/buketter" class="text-darkgrey hover:text-wine">Buketter</a>
+      <a href="/livets-begivenheder" class="text-darkgrey hover:text-wine">
+        Livets Begivenheder
+      </a>
+      <a href="/om-os" class="text-darkgrey hover:text-wine">Om Os</a>
+      <a href="/kontakt" class="text-darkgrey hover:text-wine">Kontakt</a>
+      <a href="/click-collect" class="text-darkgrey hover:text-wine">
+        Click & Collect
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Toggle the visibility of the mobile menu
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+
